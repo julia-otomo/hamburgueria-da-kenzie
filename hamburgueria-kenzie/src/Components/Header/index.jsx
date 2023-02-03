@@ -1,13 +1,7 @@
 import { HeaderContainer } from "./style";
 import { InputSearch } from "../InputSearch";
 
-export function Header({
-  input,
-  setInput,
-  products,
-  setFilteredProducts,
-  filteredProducts,
-}) {
+export function Header({ input, setInput, products, setFilteredProducts }) {
   return (
     <HeaderContainer>
       <div className="header__container--div">
@@ -19,7 +13,6 @@ export function Header({
           setInput={setInput}
           products={products}
           setFilteredProducts={setFilteredProducts}
-          filteredProducts={filteredProducts}
         />
       </div>
     </HeaderContainer>

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const StyledCard = styled.li`
+  margin-right: 20px;
   min-width: 300px;
   width: 300px;
   max-width: 90%;
@@ -39,5 +40,9 @@ export const StyledCard = styled.li`
       font-weight: var(--font-weight-bold);
       color: var(--color-primary);
     }
+  }
+
+  @media (min-width: 1024px) {
+    margin-right: 0;
   }
 `;

@@ -7,7 +7,6 @@ export function InputSearch({
   setInput,
   products,
   setFilteredProducts,
-  filteredProducts,
 }) {
   function handleSubmit(event) {
     event.preventDefault();
@@ -38,7 +37,7 @@ export function InputSearch({
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />
-      <Button type="submit" buttonTitle={"Adicionar"} />
+      <Button type="submit" buttonTitle={"Pesquisar"} />
     </FormContainer>
   );
 }

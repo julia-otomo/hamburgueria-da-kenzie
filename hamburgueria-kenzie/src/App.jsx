@@ -60,7 +60,6 @@ function App() {
         setInput={setInput}
         products={products}
         setFilteredProducts={setFilteredProducts}
-        filteredProducts={filteredProducts}
       />
 
       <main>
@@ -71,13 +70,15 @@ function App() {
               <button onClick={handleClick}>Voltar</button>
             </div>
           ) : null}
-          <ProductsList
-            newProductsList={newProductsList}
-            setCart={setCart}
-            cart={cart}
-          />
+          <div className="products-and-cart__container">
+            <ProductsList
+              newProductsList={newProductsList}
+              setCart={setCart}
+              cart={cart}
+            />
 
-          <Cart cart={cart} setcart={setCart} />
+            <Cart cart={cart} setcart={setCart} />
+          </div>
         </div>
       </main>
     </ApplicationBody>

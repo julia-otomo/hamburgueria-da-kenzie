@@ -27,4 +27,13 @@ export const HeaderContainer = styled.header`
       }
     }
   }
+
+  @media (min-width: 1024px) {
+    height: 80px;
+
+    .header__container--div {
+      width: 75%;
+      flex-direction: row;
+    }
+  }
 `;

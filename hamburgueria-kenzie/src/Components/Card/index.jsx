@@ -27,7 +27,12 @@ export function Card({ newProductsList, product, setCart, cart }) {
       <div className="information__container">
         <h2>{product.name}</h2>
         <span>{product.category}</span>
-        <p>R${product.price},00</p>
+        <p>
+          {product.price.toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL",
+          })}
+        </p>
         <Button
           buttonTitle={"Adicionar"}
           buttonId={product.id}

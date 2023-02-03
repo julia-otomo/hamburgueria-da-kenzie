@@ -1,4 +1,5 @@
 import { CartCard } from "../Cart-Card";
+import { TotalCart } from "../TotalCart";
 import { StyledCart } from "./style";
 
 export function Cart({ cart, setcart }) {
@@ -14,13 +15,24 @@ export function Cart({ cart, setcart }) {
           <p>Adicione itens</p>
         </div>
       ) : (
-        <ul>
-          {cart.map((product) => {
-            return (
-              <CartCard productCart={product} cart={cart} setcart={setcart} />
-            );
-          })}
-        </ul>
+        <div className="filled__cart">
+          <ul>
+            {cart.map((product) => {
+              return (
+                <CartCard
+                  productCart={product}
+                  cart={cart}
+                  setcart={setcart}
+                  key={product.id}
+                />
+              );
+            })}
+          </ul>
+
+          <div className="line"></div>
+
+          <TotalCart cart={cart} setCart={setcart} />
+        </div>
       )}
     </StyledCart>
   );

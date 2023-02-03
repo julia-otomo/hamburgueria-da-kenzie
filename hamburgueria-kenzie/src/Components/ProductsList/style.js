@@ -5,5 +5,11 @@ export const StyledProductsList = styled.ul`
   flex-direction: row;
   overflow-x: auto;
   align-items: center;
-  gap: 20px;
+
+  @media (min-width: 1024px) {
+    flex-wrap: wrap;
+    width: 75%;
+    margin-top: 1rem;
+    gap: 20px;
+  }
 `;
