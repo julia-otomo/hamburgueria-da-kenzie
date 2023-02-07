@@ -15,7 +15,8 @@ function App() {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState(getCartList ? JSON.parse(getCartList) : []);
   const [filteredProducts, setFilteredProducts] = useState([]);
-  const newProductsList = input === "" ? products : filteredProducts;
+  const newProductsList =
+    filteredProducts.length > 0 ? filteredProducts : products;
 
   useEffect(() => {
     async function getAllProducts() {

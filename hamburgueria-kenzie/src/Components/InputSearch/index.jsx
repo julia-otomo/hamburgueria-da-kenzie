@@ -13,12 +13,10 @@ export function InputSearch({
 
     if (input !== "") {
       const filteredList = products.filter((product) => {
-        if (
+        return (
           product.name.toLowerCase().includes(input.toLowerCase()) ||
           product.category.toLowerCase().includes(input.toLowerCase())
-        ) {
-          return product;
-        }
+        );
       });
 
       if (filteredList.length === 0) {
